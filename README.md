@@ -42,13 +42,13 @@ gem 'jquery-rails'
 gem 'cdnjs-rails'
 ```
 
-- In the supplied demo app, we are including 2 libraries `jquery` and `jquery-ui` where `cdnjs` is the name of the partial path on [cdnjs.com](http://cdnjs.com/) and `localpath` matches the folder path in your local application i.e. vendor directory. Add this to your `config/application.rb` file so that it is loaded in all environments:
+- In the supplied demo app, we are including 2 libraries `jquery` and `jquery-ui` where `cdnjs` is the name of the partial path on [cdnjs.com](http://cdnjs.com/) and `localpath` matches the folder path in your local application i.e. vendor directory, and :windowvar matches a variable that is added to the global scope by the library. Add this to your `config/application.rb` file so that it is loaded in all environments:
 
 ```ruby
 # Specify CDNJS Libraries to include in the header with fallback using an array of hashes
 config.cdnjs = [
-  {:cdnjs => 'jquery/2.0.2/jquery.min.js', :localpath => 'jquery.js'},
-  {:cdnjs => 'jqueryui/1.10.3/jquery-ui.min.js', :localpath => 'jquery-ui.min.js'}
+  {:cdnjs => 'jquery/2.0.2/jquery.min.js', :localpath => 'jquery.js', :windowvar => 'jQuery'},
+  {:cdnjs => 'jqueryui/1.10.3/jquery-ui.min.js', :localpath => 'jquery-ui.min.js', :windowvar => 'jQuery.ui'}
 ]
 ```
 
