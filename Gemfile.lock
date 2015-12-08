@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jquery-rails-google-cdn (0.0.2)
+    cdnjs-rails (1.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -11,4 +11,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jquery-rails-google-cdn!
+  cdnjs-rails!
+
+BUNDLED WITH
+   1.10.6
