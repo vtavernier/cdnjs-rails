@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.require_paths     = ["lib"]
   s.name              = "cdnjs-rails"
   s.licenses          = "GPL"
-  s.version           = '1.0.2'
+  s.version           = '1.0.3'
 end
