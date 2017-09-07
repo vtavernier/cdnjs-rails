@@ -9,6 +9,11 @@ module CDNJS
         window_var = js_file_config.fetch(:windowvar, nil)
         local_path = js_file_config.fetch(:localpath, nil)
 
+        # Ensure cdnjs has been given
+        unless cdnjs_path
+          raise CDNJS::InvalidConfig.new(js_file_config)
+        end
+
         # Output cdnjs loading tag
         js_string_output << javascript_include_tag("//cdnjs.cloudflare.com/ajax/libs/#{cdnjs_path}")
 
